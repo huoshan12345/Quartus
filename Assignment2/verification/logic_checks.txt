@@ -1,0 +1,5 @@
+PASS counter16: 680 priority/hold/overflow cases and 512 consecutive increments; 16 DFFs
+PASS counter12: 680 priority/hold/overflow cases and 512 consecutive increments; 12 DFFs
+PASS register8: 512 load/hold/no-edge cases; 8 DFFs
+PASS register16: 512 load/hold/no-edge cases; 16 DFFs
+PASS bus16_mux8: 1672 cases, all 8 selectors, every input bit isolated, and random words; purely combinational

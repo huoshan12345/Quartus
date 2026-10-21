@@ -1,59 +1,64 @@
-# Created by https://www.toptal.com/developers/gitignore/api/alteraquartusii
-# Edit at https://www.toptal.com/developers/gitignore?templates=alteraquartusii
+# Quartus compilation databases and generated output
+db/
+incremental_db/
+output_files/
+greybox_tmp/
+qdb/
+*.qdb
+*.qws
+*.qdf
+*.rpt
+*.summary
+*.smsg
+*.jdi
+*.pin
+*.sof
+*.pof
+*.rbf
+*.rpd
+*.jic
+*.done
+*.qmsg
+*_assignment_defaults.qdf
+c5_pin_model_dump.txt
+cr_ie_info.json
 
-### AlteraQuartusII ###
-##list taken from http://www.alterawiki.com/wiki/Version_Control (01.10.2015)
+# ModelSim / Questa compiled libraries and local session data
+work/
+rtl_work/
+gate_work/
+*_work/
+modelsim.ini
+transcript
+msim_transcript
+*.wlf
+*.wlft
+*.wlfx
+vsim_stacktrace.vstf
+vsim_crash.vstf
 
-######### Quartus II source files
+# Generated simulation netlists and NativeLink launch scripts
+*.vo
+*.vho
+*.sdo
+*.sft
+*_modelsim.xrf
+*_run_msim_gate_*.do
+*_run_msim_rtl_*.do
 
-# project files:
-### project_name.qpf Quartus II project file
-### project_name.qsf Quartus constraint file (lists the hardware constraints defined for a project, from the used chip and pinout to timing constraints)
-### project_name.qws Quartus Window Settings ? (the configuration of the Quartus gui for the project, may be omitted)
+# Local backups and temporary files
+/backup/
+*.bak
+*.orig
+*.tmp
+*~
 
-# top level source files:
-### project_name.bdf Block diagram / Schematic file (top level schematic file, there may be many nested files)
-### project_name.vhd VHDL file (top level VHDL file)
-### project_name.v Verilog file (top level Verilog file)
+# Python helper caches
+__pycache__/
+*.py[cod]
 
-# component source files:
-### component_name.bsf Block Symbol file (component symbol file)
-### component_name.vhd VHDL file (top level VHDL file)
-### component_name.v Verilog file (top level Verilog file)
-
-# SOPC builder project source files (SOPC builder creates many VHDL or Verilog files, that you do not need to store)
-### sopc_project_name.ptf the list and configuration of components selected in the SOPC gui
-### sopc_project_name.bsf Block Symbol file (SOPC component symbol file, especially if you modified it)
-
-# Board Description (if you created your own board, the list is incomplete!)
-### board_name/class.ptf
-
-# software source files:
-### tbd
-
-######## Quartus II binary files
-
-# hardware binary files
-### project_name.sof SRAM Object File
-
-# software binary files
-
-/*
-!/*.gitignore
-##
-!*.qpf
-!*.qsf
-!*.qws
-!*.bdf
-!*.vhd
-!*.v
-!*.ptf
-!*.bsf
-!**/class.ptf
-!*.tbd
-!*.sof
-## tbd
-
-!*.tcl
-
-# End of https://www.toptal.com/developers/gitignore/api/alteraquartusii
+# Keep design sources, project settings, symbols, constraints,
+# memory initialization, testbenches, waveforms, and user scripts:
+# *.qpf *.qsf *.bdf *.bsf *.v *.sv *.vhd *.vhdl *.sdc
+# *.mif *.hex *.vwf *.do *.tcl
+# Submission figures and verification results are also kept.
