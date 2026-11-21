@@ -19,18 +19,18 @@
 #
 # Quartus Prime
 # Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-# Date created = 15:58:16  October 21, 2026
+# Date created = 20:17:53  October 21, 2026
 #
 # -------------------------------------------------------------------------- #
 
 QUARTUS_VERSION = "20.1"
-DATE = "15:58:16  October 21, 2026"
+DATE = "20:17:53  October 21, 2026"
 
 # Revisions
 
+PROJECT_REVISION = "register16"
 PROJECT_REVISION = "datapath"
 PROJECT_REVISION = "bus16_mux8"
 PROJECT_REVISION = "register8"
-PROJECT_REVISION = "register16"
 PROJECT_REVISION = "counter12"
 PROJECT_REVISION = "counter16"
