@@ -29,7 +29,10 @@ def emit(node):
 
 
 def txt(value,x,y,size=8,visible=True):
-    node = ['text',json.dumps(value),['rect',x,y,x+max(16,len(value)*7),y+18],
+    char_w = max(11.0, size * 1.75)
+    w = max(36, int(len(value) * char_w) + 20)
+    h = max(22, int(size * 2.6) + 8)
+    node = ['text',json.dumps(value),['rect',x,y,x+w,y+h],
             ['font','"Arial"',['font_size',size]]]
     if not visible:
         node.append(['invisible'])
@@ -106,15 +109,22 @@ class Sheet:
 
     def pin(self,name,direction,x,y):
         incoming=direction=='input'
-        left=x-168 if incoming else x
-        node=['pin',[direction],['rect',left,y-8,left+(168 if incoming else 176),y+8],
-              txt(direction.upper(),133 if incoming else 1,0,6),
-              txt(name,5 if incoming else 90,0),['pt',168 if incoming else 0,8]]
-        segments=[(92,4,117,4),(92,12,117,12),(92,4,92,12),(117,4,121,8),(117,12,121,8),(121,8,168,8)] if incoming else [
-            (0,8,52,8),(52,4,78,4),(52,12,78,12),(52,4,52,12),(78,4,82,8),(78,12,82,8)]
-        node.append(['drawing',*[line((a,b),(c,d)) for a,b,c,d in segments]])
         if incoming:
-            node.append(txt('VCC',136,7,6))
+            pw=192
+            left=x-pw
+            node=['pin',[direction],['rect',left,y-10,x,y+12],
+                  txt('INPUT',148,0,6,visible=False),
+                  txt(name,0,0,8),['pt',pw,10]]
+            segments=[(136,6,161,6),(136,14,161,14),(136,6,136,14),(161,6,165,10),(161,14,165,10),(165,10,pw,10)]
+            node.append(['drawing',*[line((a,b),(c,d)) for a,b,c,d in segments]])
+            node.append(txt('VCC',156,7,6,visible=False))
+        else:
+            pw=240
+            node=['pin',[direction],['rect',x,y-10,x+pw,y+12],
+                  txt('OUTPUT',1,0,6,visible=False),
+                  txt(name,72,0,8),['pt',0,10]]
+            segments=[(0,10,36,10),(36,6,62,6),(36,14,62,14),(36,6,36,14),(62,6,66,10),(62,14,66,10)]
+            node.append(['drawing',*[line((a,b),(c,d)) for a,b,c,d in segments]])
         self.nodes.append(node)
         return (x,y)
 

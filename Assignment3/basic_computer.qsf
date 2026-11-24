@@ -1,0 +1,32 @@
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name DEVICE 5CGXFC7C7F23C8
+set_global_assignment -name TOP_LEVEL_ENTITY basic_computer
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.0
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name SEARCH_PATH .
+set_global_assignment -name NUM_PARALLEL_PROCESSORS 2
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+set_global_assignment -name BDF_FILE counter16.bdf
+set_global_assignment -name BDF_FILE counter12.bdf
+set_global_assignment -name BDF_FILE counter4.bdf
+set_global_assignment -name BDF_FILE register8.bdf
+set_global_assignment -name BDF_FILE register16.bdf
+set_global_assignment -name BDF_FILE bus16_mux8.bdf
+set_global_assignment -name BDF_FILE priority_control.bdf
+set_global_assignment -name BDF_FILE alu16.bdf
+set_global_assignment -name BDF_FILE alu_slice.bdf
+set_global_assignment -name BDF_FILE state_bit.bdf
+set_global_assignment -name BDF_FILE extend_next.bdf
+set_global_assignment -name BDF_FILE zext12.bdf
+set_global_assignment -name BDF_FILE zero16.bdf
+set_global_assignment -name BDF_FILE dec38_en.bdf
+set_global_assignment -name BDF_FILE dec416_en.bdf
+set_global_assignment -name BDF_FILE zero_detect16.bdf
+set_global_assignment -name BDF_FILE bus_encoder83.bdf
+set_global_assignment -name BDF_FILE datapath.bdf
+set_global_assignment -name BDF_FILE control_unit.bdf
+set_global_assignment -name BDF_FILE basic_computer.bdf
+set_global_assignment -name VHDL_FILE ram2port.vhd
+set_global_assignment -name MIF_FILE program.mif
