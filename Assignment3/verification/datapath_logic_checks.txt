@@ -1,0 +1,5 @@
+PASS ALU: 3263 gate-logic cases, seven operations, carry-out, and inactive controls
+PASS state_bit: all 16 old-state / clear / load / data combinations; synchronous behavior
+PASS extend_next: 256 carry / rotate / complement / hold cases
+PASS zext12: all 4096 input values; four high bits zero
+PASS zero16: all output bits zero

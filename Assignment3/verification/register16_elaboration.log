@@ -1,0 +1,40 @@
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Elaboration
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Copyright (C) 2020  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the applicable agreement for further details, at
+    Info: https://fpgasoftware.intel.com/eula.
+    Info: Processing started: Tue Oct 20 23:37:26 2026
+Info: Command: quartus_map assignment2 -c register16 --analysis_and_elaboration
+Info (20032): Parallel compilation is enabled and will use up to 2 processors
+Info (12021): Found 1 design units, including 1 entities, in source file counter16.bdf
+    Info (12023): Found entity 1: counter16
+Info (12021): Found 1 design units, including 1 entities, in source file counter12.bdf
+    Info (12023): Found entity 1: counter12
+Info (12021): Found 1 design units, including 1 entities, in source file register8.bdf
+    Info (12023): Found entity 1: register8
+Info (12021): Found 1 design units, including 1 entities, in source file register16.bdf
+    Info (12023): Found entity 1: register16
+Info (12021): Found 1 design units, including 1 entities, in source file bus16_mux8.bdf
+    Info (12023): Found entity 1: bus16_mux8
+Info (12021): Found 1 design units, including 1 entities, in source file priority_control.bdf
+    Info (12023): Found entity 1: priority_control
+Info (12127): Elaborating entity "register16" for the top level hierarchy
+Info (12128): Elaborating entity "21mux" for hierarchy "21mux:load_mux_00"
+Info (12130): Elaborated megafunction instantiation "21mux:load_mux_00"
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4772 megabytes
+    Info: Processing ended: Tue Oct 20 23:37:31 2026
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:01
